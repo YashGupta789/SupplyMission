@@ -3,14 +3,16 @@ var packageBody,ground,dropPoint,dropPointIMG;
 var gameState = 1;
 
 function preload(){
-	sound = loadSound("sound.mp3");
-	bg = loadImage("bg3.jpg");
-	packageIMG = loadImage("package.png");
-	dropPointIMG = loadImage("dropPoint.png")
-	helicopter1 = loadAnimation("helicopter1.png");
-	helicopter2 = loadAnimation("helicopter1.png","helicopter1.png","helicopter1.png","helicopter2.png","helicopter2.png","helicopter2.png","helicopter3.png","helicopter3.png","helicopter3.png","helicopter4.png","helicopter4.png","helicopter4.png");
+	sound = loadSound("https://yashgupta789.github.io/SupplyMission/sound.mp3");
+	bg = loadImage("https://yashgupta789.github.io/SupplyMission/bg3.jpg");
+	packageIMG = loadImage("https://yashgupta789.github.io/SupplyMission/package.png");
+	dropPointIMG = loadImage("https://yashgupta789.github.io/SupplyMission/dropPoint.png")
+	helicopter1 = loadAnimation("https://yashgupta789.github.io/SupplyMission/helicopter1.png");
+	helicopter2 = loadAnimation("https://yashgupta789.github.io/SupplyMission/helicopter1.png","https://yashgupta789.github.io/SupplyMission/helicopter1.png","https://yashgupta789.github.io/SupplyMission/helicopter1.png",
+	"https://yashgupta789.github.io/SupplyMission/helicopter2.png","https://yashgupta789.github.io/SupplyMission/helicopter2.png","https://yashgupta789.github.io/SupplyMission/helicopter2.png",
+	"https://yashgupta789.github.io/SupplyMission/helicopter3.png","https://yashgupta789.github.io/SupplyMission/helicopter3.png","https://yashgupta789.github.io/SupplyMission/helicopter3.png",
+	"https://yashgupta789.github.io/SupplyMission/helicopter4.png","https://yashgupta789.github.io/SupplyMission/helicopter4.png","https://yashgupta789.github.io/SupplyMission/helicopter4.png");
 }
-
 function setup() {
 	createCanvas(1000, 700);
 
