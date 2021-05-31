@@ -31,7 +31,7 @@ function setup() {
 	packageSprite.scale = 0.25;
 
 	helicopterSprite=createSprite(200,200, 10,10);
-	helicopterSprite.addAnimation("helicopter",helicopter1);
+	helicopterSprite.addAnimation("helicopter",helicopter2);
 	helicopterSprite.scale=0.75;
 	sound.play();
 	
