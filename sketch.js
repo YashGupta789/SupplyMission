@@ -28,7 +28,7 @@ function setup() {
 	//dropPoint.debug = true;
 	dropPoint.setCollider("obb",0,80,350,120);
 
-        boy = createSprite(840,600,20,20);
+        boy = createSprite(880,600,20,20);
 	boy.addImage(boyIMG);
 	boy.scale = 0.4;
 
