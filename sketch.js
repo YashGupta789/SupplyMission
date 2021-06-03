@@ -22,7 +22,7 @@ function setup() {
 	groundSprite.shapeColor=color(255);
 	groundSprite.visible = false;
 
-	dropPoint = createSprite(800,620,50,20);
+	dropPoint = createSprite(780,620,50,20);
 	dropPoint.addImage(dropPointIMG);
 	dropPoint.scale = 0.48;
 	//dropPoint.debug = true;
@@ -30,7 +30,7 @@ function setup() {
 
         boy = createSprite(840,600,20,20);
 	boy.addImage(boyIMG);
-	boy.scale = 1;
+	boy.scale = 0.4;
 
 	packageSprite = createSprite(200,200,80,80);
 	packageSprite.addImage(packageIMG);
