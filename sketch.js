@@ -22,15 +22,15 @@ function setup() {
 	groundSprite.shapeColor=color(255);
 	groundSprite.visible = false;
 
-	dropPoint = createSprite(820,620,50,20);
+	dropPoint = createSprite(800,620,50,20);
 	dropPoint.addImage(dropPointIMG);
 	dropPoint.scale = 0.48;
 	//dropPoint.debug = true;
 	dropPoint.setCollider("obb",0,80,350,120);
 
-    boy = createSprite(850,600,20,20);
+        boy = createSprite(840,600,20,20);
 	boy.addImage(boyIMG);
-	boy.scale = 4;
+	boy.scale = 1;
 
 	packageSprite = createSprite(200,200,80,80);
 	packageSprite.addImage(packageIMG);
