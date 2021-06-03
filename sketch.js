@@ -1,9 +1,10 @@
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
-var packageBody,ground,dropPoint,dropPointIMG;
+var packageBody,ground,dropPoint,dropPointIMG,boy,boyIMG;
 var gameState = 1;
 
 function preload(){
 	sound = loadSound("https://yashgupta789.github.io/SupplyMission/sound.mp3");
+	boyIMG = loadImage("https://yashgupta789.github.io/SupplyMission/boy.png");
 	bg = loadImage("https://yashgupta789.github.io/SupplyMission/bg3.jpg");
 	packageIMG = loadImage("https://yashgupta789.github.io/SupplyMission/package.png");
 	dropPointIMG = loadImage("https://yashgupta789.github.io/SupplyMission/dropPoint.png")
@@ -13,6 +14,7 @@ function preload(){
 	"https://yashgupta789.github.io/SupplyMission/helicopter3.png","https://yashgupta789.github.io/SupplyMission/helicopter3.png","https://yashgupta789.github.io/SupplyMission/helicopter3.png",
 	"https://yashgupta789.github.io/SupplyMission/helicopter4.png","https://yashgupta789.github.io/SupplyMission/helicopter4.png","https://yashgupta789.github.io/SupplyMission/helicopter4.png");
 }
+
 function setup() {
 	createCanvas(1000, 700);
 
@@ -26,12 +28,16 @@ function setup() {
 	//dropPoint.debug = true;
 	dropPoint.setCollider("obb",0,80,350,120);
 
+    boy = createSprite(850,600,20,20);
+	boy.addImage(boyIMG);
+	boy.scale = 4;
+
 	packageSprite = createSprite(200,200,80,80);
 	packageSprite.addImage(packageIMG);
 	packageSprite.scale = 0.25;
 
 	helicopterSprite=createSprite(200,200, 10,10);
-	helicopterSprite.addAnimation("helicopter",helicopter2);
+	helicopterSprite.addAnimation("helicopter",helicopter1);
 	helicopterSprite.scale=0.75;
 	sound.play();
 	
