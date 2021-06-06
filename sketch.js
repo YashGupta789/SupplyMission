@@ -1,5 +1,6 @@
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
 var packageBody,ground,dropPoint,dropPointIMG,boy,boyIMG;
+var button1,button2,button3;
 var gameState = 1;
 
 function preload(){
@@ -28,19 +29,39 @@ function setup() {
 	//dropPoint.debug = true;
 	dropPoint.setCollider("obb",0,80,350,120);
 
-        boy = createSprite(925,600,20,20);
+        boy = createSprite(920,580,20,20);
 	boy.addImage(boyIMG);
 	boy.scale = 0.4;
 
-	packageSprite = createSprite(200,200,80,80);
+	packageSprite = createSprite(200,220,80,80);
 	packageSprite.addImage(packageIMG);
 	packageSprite.scale = 0.25;
 
-	helicopterSprite=createSprite(200,200, 10,10);
-	helicopterSprite.addAnimation("helicopter",helicopter1);
+	helicopterSprite=createSprite(200,220, 10,10);
+	helicopterSprite.addAnimation("helicopter",helicopter2);
 	helicopterSprite.scale=0.75;
 	sound.play();
+
+	button1 = createButton('🡸');
+	button1.position(720,50);
+	button1.style('font-size','28px');
+	button1.style('width', '55px');
+        button1.style('height', '42px');
+	button1.style('background',  rgb(255, 185, 207));
 	
+	button2 = createButton('🡺');
+	button2.position(800,50);
+	button2.style('font-size','28px');
+	button2.style('width', '55px');
+        button2.style('height', '42px');
+	button2.style('background', rgb(255, 185, 207));
+
+	button3 = createButton('DROP THE PACKAGE');
+	button3.position(680,110);
+	button3.style('font-size','20px');
+	button3.style('width', '220px');
+        button3.style('height', '40px');
+	button3.style('background', rgb(44, 255, 59));
 }
 
 function draw() {
@@ -53,15 +74,32 @@ function draw() {
 	 keyPressed();
 	 key1();
 	 key2();
+	 key3();
+	button1.mousePressed(() => {
+		helicopterSprite.x = helicopterSprite.x-30;
+		helicopterSprite.addAnimation("helicopter",helicopter2);
+	})
+	button2.mousePressed(() => {
+		helicopterSprite.x = helicopterSprite.x+30;
+		helicopterSprite.addAnimation("helicopter",helicopter2);
+	})
   }
 
   if(gameState === 2){
-	
 	 packageSprite.velocityY = packageSprite.velocityY+2;
 	 if(packageSprite.isTouching(dropPoint)){
 		packageSprite.collide(dropPoint);
 		gameState = 3;
 	   }
+	   button1.mousePressed(() => {
+		helicopterSprite.x = helicopterSprite.x-0;
+	  })
+	  button2.mousePressed(() => {
+		helicopterSprite.x = helicopterSprite.x+0;
+	  })
+	  button3.mousePressed(() => {
+		 
+	  })
    }	 
 
   if(gameState === 3){
@@ -89,6 +127,12 @@ function key2() {
 	   helicopterSprite.x = helicopterSprite.x+5;
 	   helicopterSprite.addAnimation("helicopter",helicopter2);	   
 	}
+}
+
+function key3(){
+	button3.mousePressed(() => {
+	    gameState = 2;
+	})
 }
 
 function correct(){
