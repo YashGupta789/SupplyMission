@@ -42,14 +42,14 @@ function setup() {
 	helicopterSprite.scale=0.75;
 	sound.play();
 
-	button1 = createButton('🡸');
+	button1 = createButton('<=');
 	button1.position(800,930);
 	button1.style('font-size','28px');
 	button1.style('width', '55px');
         button1.style('height', '42px');
 	button1.style('background',  rgb(255, 185, 207));
 	
-	button2 = createButton('🡺');
+	button2 = createButton('=>');
 	button2.position(800,930);
 	button2.style('font-size','28px');
 	button2.style('width', '55px');
