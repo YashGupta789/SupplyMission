@@ -43,21 +43,21 @@ function setup() {
 	sound.play();
 
 	button1 = createButton('🡸');
-	button1.position(720,50);
+	button1.position(720,750);
 	button1.style('font-size','28px');
 	button1.style('width', '55px');
         button1.style('height', '42px');
 	button1.style('background',  rgb(255, 185, 207));
 	
 	button2 = createButton('🡺');
-	button2.position(800,50);
+	button2.position(800,750);
 	button2.style('font-size','28px');
 	button2.style('width', '55px');
         button2.style('height', '42px');
 	button2.style('background', rgb(255, 185, 207));
 
 	button3 = createButton('DROP THE PACKAGE');
-	button3.position(680,110);
+	button3.position(680,820);
 	button3.style('font-size','20px');
 	button3.style('width', '220px');
         button3.style('height', '40px');
