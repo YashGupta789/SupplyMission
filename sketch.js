@@ -50,7 +50,7 @@ function setup() {
 	button1.style('background',  rgb(255, 185, 207));
 	
 	button2 = createButton('=>');
-	button2.position(800,1020);
+	button2.position(810,1020);
 	button2.style('font-size','28px');
 	button2.style('width', '55px');
         button2.style('height', '42px');
